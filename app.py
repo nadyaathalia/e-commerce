@@ -1,4 +1,4 @@
-# app.py - ULTRA SINGKAT
+# app.py
 import streamlit as st
 import graphviz
 from ecommerce import EcommerceCatalog
@@ -41,7 +41,7 @@ with st.sidebar:
     st.metric("📦 Total Stok", stats['total_stock'])
 
 # Tabs
-tab1, tab2, tab3, tab4 = st.tabs(["➕ Tambah", "🗑️ Hapus", "📊 Visualisasi", "🔍 Cari"])
+tab1, tab2, tab3, tab4 = st.tabs(["➕ Tambah", "🗑️ Hapus", "🔍 Cari", "📊 Visualisasi"])
 
 # TAB 1: Tambah
 with tab1:
@@ -98,16 +98,8 @@ with tab2:
                 else:
                     st.error("Centang dulu")
 
-# TAB 3: Visualisasi
+# TAB 3: Cari
 with tab3:
-    st.header("Visualisasi Tree")
-    dot = graphviz.Digraph(engine="dot")
-    dot.attr(rankdir='TB')
-    fs.generate_graphviz_structure(dot)
-    st.graphviz_chart(dot, use_container_width=True)
-
-# TAB 4:Search
-with tab4:
     st.header("Cari Produk")
     keyword = st.text_input("Nama produk:")
     if keyword:
@@ -119,6 +111,14 @@ with tab4:
             st.write(f"*Stok:* {node.data['stok']}")
         else:
             st.error("❌ Produk tidak ditemukan.")
+
+# TAB 4: Visualisasi
+with tab4:
+    st.header("Visualisasi Tree")
+    dot = graphviz.Digraph(engine="dot")
+    dot.attr(rankdir='TB')
+    fs.generate_graphviz_structure(dot)
+    st.graphviz_chart(dot, use_container_width=True)
 
 st.divider()
 st.caption("General Tree Implementation | UAS Struktur Data")
