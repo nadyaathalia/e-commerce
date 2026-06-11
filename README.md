@@ -113,39 +113,40 @@ Aplikasi akan terbuka otomatis di browser pada alamat:
 http://localhost:8501
 ```
 
-🛠️ Alur Pengembangan dan Kolaborasi (Git Workflow)
+## 🛠️ Alur Pengembangan dan Kolaborasi (Git Workflow)
 Sesuai dengan standar pengembangan perangkat lunak di industri, proyek ini dikelola menggunakan Git dengan mekanisme kolaborasi berbasis repositori. Berikut adalah panduan teknis untuk menyalin proyek dan ikut serta berkontribusi:
 
-📥 1. Cara Menyalin Proyek (Clone)
+## 📥 1. Cara Menyalin Proyek (Clone)
 Bagi Anda yang ingin menguji, menjalankan, atau meninjau seluruh baris kode aplikasi ini di perangkat lokal masing-masing, ikuti perintah berikut pada terminal atau Git Bash:
 
 Bash
-# 1. Melakukan clone repositori proyek
+### 1. Melakukan clone repositori proyek
 ```bash
     git clone https://github.com/khalilullahalihsan/materi-kuliah.git
     cd materi-kuliah
     streamlit run app.py
     ```
 ```
-# 2. Masuk ke dalam direktori/folder proyek yang telah di-clone
+### 2. Masuk ke dalam direktori/folder proyek yang telah di-clone
 cd materi-kuliah
 
-# 3. Pastikan dependensi sudah terinstall, lalu jalankan program
+### 3. Pastikan dependensi sudah terinstall, lalu jalankan program
 streamlit run app.py
-### 🤝 2. Cara Berkontribusi (Contribute)
+
+## 🤝 2. Cara Berkontribusi (Contribute)
 Kami menerapkan alur kerja Fork & Pull Request Workflow untuk memastikan setiap kode baru divalidasi dan diuji terlebih dahulu sebelum digabungkan ke kode utama. Jika Anda ingin berkontribusi memperbaiki bug atau menambahkan fitur baru:
 
-#1. Fork Repositori proyek ini ke akun GitHub Anda masing-masing melalui tombol Fork di pojok kanan atas halaman GitHub.
+### 1. Fork Repositori proyek ini ke akun GitHub Anda masing-masing melalui tombol Fork di pojok kanan atas halaman GitHub.
 
-#2. Clone hasil fork Anda ke perangkat lokal.
+### 2. Clone hasil fork Anda ke perangkat lokal.
 
-#3. Buat Branch Baru yang spesifik untuk fitur atau perbaikan yang akan Anda kerjakan agar tidak mengganggu branch utama (main):
+###3. Buat Branch Baru yang spesifik untuk fitur atau perbaikan yang akan Anda kerjakan agar tidak mengganggu branch utama (main):
 
 ```Bash
 git checkout -b fitur-baru-anda
 ```
-# 4. **Lakukan Perubahan** pada file kode program Anda secara rapi (terapkan prinsip OOP dan *Separation of Concerns*).
-# 5. **Simpan dan Commit** perubahan kode Anda dengan menyertakan pesan commit yang jelas dan deskriptif:
+### 4. **Lakukan Perubahan** pada file kode program Anda secara rapi (terapkan prinsip OOP dan *Separation of Concerns*).
+### 5. **Simpan dan Commit** perubahan kode Anda dengan menyertakan pesan commit yang jelas dan deskriptif:
    ```bash
    git add .
    git commit -m "feat: menambahkan validasi dinamis input produk pada app.py"
@@ -155,7 +156,7 @@ Push Branch tersebut ke repositori fork di akun GitHub Anda:
 git push origin fitur-baru-anda
 ```
 
-7. **Buat Pull Request (PR)** melalui antarmuka GitHub dari branch repositori Anda ke branch `main` repositori utama kami. Tim kami akan meninjau (*code review*) kontribusi Anda sebelum melakukan *merge*.
+### 7. **Buat Pull Request (PR)** melalui antarmuka GitHub dari branch repositori Anda ke branch `main` repositori utama kami. Tim kami akan meninjau (*code review*) kontribusi Anda sebelum melakukan *merge*.
 
 ---
 ## ✨ Fitur Aplikasi
